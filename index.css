@@ -1,0 +1,53 @@
+/* ---------- CUSTOM PROPERTIES --------------- */
+
+:root {
+    --cl-black: 0, 0%, 5%;
+    --cl-white: 0, 0%, 100%;
+    --cl-profile-name: 0, 0%, 97%;
+    --cl-profile-bio: 0, 0%, 72%;
+}
+
+/* RESET */
+/* CSS Reset https://andy-bell.co.uk/a-modern-css-reset/ */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* Set up body */
+body {
+    
+}
+
+/* Make images easier to work with */
+img {
+    display: block;
+    object-fit: cover;
+}
+
+/* ---------------- UTILITY CLASSES ------------------*/
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 .5rem;
+    max-width: 35rem;
+    background-color: hsl(var(--cl-profile-name));
+}
+
+/* ----------------- TYPOGRAPHY ------------------- */
+
+/* ---------------- LAYOUT -------------------- */
