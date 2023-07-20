@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
     />
+    <!-- Style -->
     <link rel="stylesheet" href="index.css" />
     <title>Tindog</title>
   </head>
+
   <body>
     <header>
       <div class="container">
         <img
-          class="icon"
+          class="profile-icon"
           src="./images/icon-profile.png"
           alt="An icon with a person's silhouette"
         />
         <img
-          class="icon"
+          class="logo"
           src="./images/logo.png"
           alt="An icon with a dog's pawn"
         />
         <img
-          class="icon"
+          class="chat-icon"
           src="./images/icon-chat.png"
           alt="An icon with a comic book bubble"
         />
@@ -33,21 +43,22 @@
 
     <main>
       <div class="container">
-        <div class="profile">
+        <div id="profile">
           <!-- Profile html lives here -->
           <div
-            class="profile-avatar"
+            class="profile"
             style="background-image: url(./images/dog-teddy.jpg)"
           >
             <h2 class="profile-name">Teddy, 30</h2>
             <p class="profile-bio">How you doing</p>
           </div>
+          <!-- Ends here -->
         </div>
-        <div class="button-wrapper">
-          <button class="btn">
+        <div class="button-wrapper flex">
+          <button id="reject-btn" class="btn rounded flex">
             <img src="./images/icon-cross.png" alt="An icon with a red cross" />
           </button>
-          <button class="btn">
+          <button id="like-btn" class="btn rounded flex">
             <img
               src="./images/icon-heart.png"
               alt="An icon with a green hearth"
