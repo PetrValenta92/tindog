@@ -29,7 +29,11 @@ p {
 
 /* Set up body */
 body {
-    
+  font-family: 'Poppins', sans-serif;
+  color: hsl(var(--cl-profile-bio));
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
 
 /* Make images easier to work with */
@@ -46,8 +50,82 @@ img {
     padding: 0 .5rem;
     max-width: 35rem;
     background-color: hsl(var(--cl-profile-name));
+    display: flex;
+}
+
+.rounded {
+  border-radius: 50%;
+}
+
+.flex {
+  display: flex;
 }
 
 /* ----------------- TYPOGRAPHY ------------------- */
 
+h2 {
+  font-weight: 600;
+  color: hsl(var(--cl-profile-name));
+  font-size: 2rem;
+  line-height: 1.125;
+}
+
 /* ---------------- LAYOUT -------------------- */
+
+/* Header */
+
+header .container {
+  padding: 1.25rem 1.125rem; 
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-icon {
+  width: 2rem;
+  height: 2.125rem;
+}
+
+.logo {
+  width: 5.25rem;
+  height: 2.625rem;
+}
+
+.chat-icon {
+  width: 2.125rem;
+  height: 2.125rem;
+}
+
+/* Profile */
+
+main .container {
+  flex-direction: column;
+}
+
+.profile {
+  max-width: 100%;
+  min-height: 47rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+/* Buttons */
+
+.button-wrapper {
+  justify-content: center;
+  padding: 1.5rem 0;
+  gap: 1.5rem;
+}
+
+.btn {
+  width: 5.75rem;
+  height: 5.75rem;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: hsl(var(--cl-white));
+}
