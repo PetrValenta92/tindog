@@ -5,6 +5,8 @@
     --cl-white: 0, 0%, 100%;
     --cl-profile-name: 0, 0%, 97%;
     --cl-profile-bio: 0, 0%, 72%;
+    --cl-like-btn-hovered: 162, 100%, 93%;
+    --cl-reject-btn-hovered: 340, 100%, 95%;
 }
 
 /* RESET */
@@ -128,4 +130,6 @@ main .container {
   align-items: center;
   border: none;
   background-color: hsl(var(--cl-white));
+  cursor: pointer;
 }
+
