@@ -109,6 +109,8 @@ main .container {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 1rem;
+  padding-left: .75em;
+  padding-bottom: 1em;
 
   display: flex;
   flex-direction: column;
@@ -130,6 +132,20 @@ main .container {
   align-items: center;
   border: none;
   background-color: hsl(var(--cl-white));
+  box-shadow: 0 10px 15px hsl(var(--cl-profile-bio), .5);
   cursor: pointer;
 }
 
+.reject-btn:hover,
+.reject-btn:focus,
+.recect-btn:active {
+  background-color: hsl(var(--cl-reject-btn-hovered));
+  box-shadow: 0 10px 15px hsl(var(--cl-reject-btn-hovered), .8);
+}
+
+.like-btn:hover,
+.like-btn:focus,
+.like-btn:active {
+  background-color: hsl(var(--cl-like-btn-hovered));
+  box-shadow: 0 10px 15px hsl(var(--cl-like-btn-hovered), .8);
+}
