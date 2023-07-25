@@ -5,6 +5,14 @@ class Dog {
         Object.assign(this, data);
     }
 
+    isSwiped() {
+      return this.hasBeenSwiped = true;
+    }
+
+    isLiked() {
+      return this.hasBeenLiked = true;
+    }
+
     getProfileHtml() {
         const { name, avatar, age, bio } = this;
 
