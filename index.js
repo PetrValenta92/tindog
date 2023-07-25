@@ -4,20 +4,34 @@ import Dog from "./Dog.js";
 
 let currentProfileIndex = 0;
 
+
+
 document.getElementById("like-btn").addEventListener("click", () => {
-    console.log("Like btn clicked!");
+    currentProfileIndex++;
+
     document.getElementById("like-label").style.display = "block";
+
+    profiles[currentProfileIndex].isSwiped();
+    profiles[currentProfileIndex].isLiked();
+}); 
+
+document.getElementById("reject-btn").addEventListener("click", () => {
+    currentProfileIndex++;
+
+    document.getElementById("nope-label").style.display = "block";
+
+    profiles[currentProfileIndex].isSwiped();
 }); 
 
 function render() {
     document.getElementById("profile").innerHTML = profiles[currentProfileIndex].getProfileHtml();
 }
 
-const profiles = [
-    new Dog(dogData[0]),
-    new Dog(dogData[1]),
-    new Dog(dogData[2])
-];
+// document.getElementById("like-btn").addEventListener("click", likeProfile);
+// document.getElementById("reject-btn").addEventListener("click", rejectProfile);
+
+// Create an array of dog profiles
+const profiles = dogData.map(data => new Dog(data));
 
 render();
 
