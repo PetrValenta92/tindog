@@ -2,19 +2,23 @@
 import dogData from "./data.js";
 import Dog from "./Dog.js";
 
-let dogDataIndex = 0;
+let currentProfileIndex = 0;
 
-function getNewProfile() {
-    const nextDogData = dogData[dogDataIndex];
-    dogDataIndex ++;
-    return nextDogData ? new Dog(nextDogData) : {};
-}
+document.getElementById("like-btn").addEventListener("click", () => {
+    console.log("Like btn clicked!");
+    document.getElementById("like-label").style.display = "block";
+}); 
 
 function render() {
-    document.getElementById("profile").innerHTML = profile.getProfileHtml();
+    document.getElementById("profile").innerHTML = profiles[currentProfileIndex].getProfileHtml();
 }
 
-let profile = getNewProfile();
+const profiles = [
+    new Dog(dogData[0]),
+    new Dog(dogData[1]),
+    new Dog(dogData[2])
+];
 
 render();
+
 
