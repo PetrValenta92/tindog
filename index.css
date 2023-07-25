@@ -72,6 +72,39 @@ h2 {
   line-height: 1.125;
 }
 
+/* ----------------- BUTTONS ------------------- */
+
+.button-wrapper {
+  justify-content: center;
+  padding: 1.5rem 0;
+  gap: 1.5rem;
+}
+
+.btn {
+  width: 5.75rem;
+  height: 5.75rem;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: hsl(var(--cl-white));
+  box-shadow: 0 10px 15px hsl(var(--cl-profile-bio), .5);
+  cursor: pointer;
+}
+
+.reject-btn:hover,
+.reject-btn:focus,
+.recect-btn:active {
+  background-color: hsl(var(--cl-reject-btn-hovered));
+  box-shadow: 0 10px 15px hsl(var(--cl-reject-btn-hovered), .8);
+}
+
+.like-btn:hover,
+.like-btn:focus,
+.like-btn:active {
+  background-color: hsl(var(--cl-like-btn-hovered));
+  box-shadow: 0 10px 15px hsl(var(--cl-like-btn-hovered), .8);
+}
+
 /* ---------------- LAYOUT -------------------- */
 
 /* Header */
@@ -104,6 +137,8 @@ main .container {
 }
 
 .profile {
+  position: relative;
+  overflow: hidden;
   max-width: 100%;
   min-height: 47rem;
   background-size: cover;
@@ -117,35 +152,14 @@ main .container {
   justify-content: end;
 }
 
-/* Buttons */
+/* Labels */
 
-.button-wrapper {
-  justify-content: center;
-  padding: 1.5rem 0;
-  gap: 1.5rem;
-}
-
-.btn {
-  width: 5.75rem;
-  height: 5.75rem;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  background-color: hsl(var(--cl-white));
-  box-shadow: 0 10px 15px hsl(var(--cl-profile-bio), .5);
-  cursor: pointer;
-}
-
-.reject-btn:hover,
-.reject-btn:focus,
-.recect-btn:active {
-  background-color: hsl(var(--cl-reject-btn-hovered));
-  box-shadow: 0 10px 15px hsl(var(--cl-reject-btn-hovered), .8);
-}
-
-.like-btn:hover,
-.like-btn:focus,
-.like-btn:active {
-  background-color: hsl(var(--cl-like-btn-hovered));
-  box-shadow: 0 10px 15px hsl(var(--cl-like-btn-hovered), .8);
+.label {
+  position: absolute;
+  top: 3.5rem;
+  left: 0.75em;
+  display: none;
+  max-width: 14.625rem;
+  max-height: 7.25rem;
+  transform: rotate(-30deg);
 }
