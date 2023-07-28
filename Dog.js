@@ -19,7 +19,6 @@ class Dog {
       return hasBeenSwiped && hasBeenLiked ? 
       `
         <img
-          id="like-label"
           class="label"
           src="./images/badge-like.png"
           alt="Like label"
@@ -27,7 +26,6 @@ class Dog {
       ` : hasBeenSwiped && !hasBeenLiked ? 
       `
         <img
-          id="nope-label"
           class="label"
           src="./images/badge-nope.png"
           alt="Nope label"
