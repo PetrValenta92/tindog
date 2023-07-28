@@ -2,42 +2,68 @@
 import dogData from "./data.js";
 import Dog from "./Dog.js";
 
-let dogsArray = [ ...Array(dogData.length).keys() ];
+const likeBtn = document.getElementById("like-btn");
+const rejectBtn = document.getElementById("reject-btn");
+
+let dogsIndexArray = [ ...Array(dogData.length).keys() ];
 
 function getNewProfile() {
-    const nextDogData = dogData[dogsArray.shift()];
+    const nextDogData = dogData[dogsIndexArray.shift()];
     return nextDogData ? new Dog(nextDogData) : {};
 }
 
 function likeProfile() {
+    disableBtns();
     dogProfile.isLiked();
     dogProfile.isSwiped();
-    render();
-
-    setTimeout(() => {
-        dogProfile = getNewProfile();
-        render();
-    }, 1500);
-
-    
+    render();  
 }
 
 function rejectProfile() {
+    disableBtns();
     dogProfile.isSwiped();
     render();
+}
 
-    setTimeout(() => {
-        dogProfile = getNewProfile();
-        render();
-    }, 1500);
+function showNextProfile() {
+    if (dogsIndexArray.length > 0) {
+        setTimeout(() => {
+            dogProfile = getNewProfile();
+            enableBtns();
+            render();
+        }, 1000);
+    } else {
+        endApp();
+    }    
+}
+
+function disableBtns() {
+    likeBtn.disabled = true;
+    rejectBtn.disabled = true;
+}
+
+function enableBtns() {
+    likeBtn.disabled = false;
+    rejectBtn.disabled = false;
+}
+
+function endApp() {
+    console.log("No more profiles!");
 }
 
 function render() {
     document.getElementById("profile").innerHTML = dogProfile.getProfileHtml();
 }
 
-document.getElementById("like-btn").addEventListener("click", likeProfile); 
-document.getElementById("reject-btn").addEventListener("click", rejectProfile); 
+likeBtn.addEventListener("click", () => {
+    likeProfile();
+    showNextProfile();
+}); 
+
+rejectBtn.addEventListener("click", () => {
+    rejectProfile();
+    showNextProfile();
+}); 
 
 let dogProfile = getNewProfile();
 
