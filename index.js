@@ -33,7 +33,9 @@ function showNextProfile() {
             render();
         }, 1000);
     } else {
-        endApp();
+        setTimeout(() => {
+            endApp();
+        }, 1000);
     }    
 }
 
@@ -48,7 +50,7 @@ function enableBtns() {
 }
 
 function endApp() {
-    console.log("No more profiles!");
+    document.getElementById("profile").innerHTML = dogProfile.getEndingHtml();
 }
 
 function render() {
