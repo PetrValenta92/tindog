@@ -65,10 +65,14 @@ img {
 
 /* ----------------- TYPOGRAPHY ------------------- */
 
-h2 {
+h2,
+.end-btn {
+  font-size: 2rem;
   font-weight: 600;
   color: hsl(var(--cl-profile-name));
-  font-size: 2rem;
+}
+
+h2 {
   line-height: 1.125;
 }
 
@@ -103,6 +107,28 @@ h2 {
   box-shadow: 0 10px 15px hsl(var(--cl-like-btn-hovered), 0.8);
 }
 
+.end-btn {
+  margin: 1.25rem 0;
+  border: none;
+  border-radius: 1.25rem;
+  padding: 0.875rem 6rem;
+  background-image: linear-gradient(
+    90deg,
+    rgba(248, 51, 117, 1) 0%,
+    rgba(250, 105, 90, 1) 100%
+  );
+  cursor: pointer;
+}
+
+.end-btn:hover,
+.end-btn:focus {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 216, 148, 1) 0%,
+    rgba(86, 233, 205, 1) 100%
+  );
+}
+
 /* ---------------- LAYOUT -------------------- */
 
 /* Header */
@@ -134,6 +160,13 @@ main .container {
   flex-direction: column;
 }
 
+.profile,
+.end {
+  max-width: 100%;
+  min-height: 47rem;
+  flex-direction: column;
+}
+
 .profile {
   position: relative;
   overflow: hidden;
@@ -145,8 +178,6 @@ main .container {
   padding-left: 0.75em;
   padding-bottom: 1em;
 
-  display: flex;
-  flex-direction: column;
   justify-content: end;
 }
 
@@ -159,4 +190,16 @@ main .container {
   max-width: 14.625rem;
   max-height: 7.25rem;
   transform: rotate(-30deg);
+}
+
+/* End */
+
+.end {
+  justify-content: end;
+  align-items: center;
+}
+
+.end-message {
+  text-align: center;
+  margin-top: 10rem;
 }
