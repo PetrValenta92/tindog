@@ -1,12 +1,12 @@
 /* ---------- CUSTOM PROPERTIES --------------- */
 
 :root {
-    --cl-black: 0, 0%, 5%;
-    --cl-white: 0, 0%, 100%;
-    --cl-profile-name: 0, 0%, 97%;
-    --cl-profile-bio: 0, 0%, 72%;
-    --cl-like-btn-hovered: 162, 100%, 93%;
-    --cl-reject-btn-hovered: 340, 100%, 95%;
+  --cl-black: 0, 0%, 5%;
+  --cl-white: 0, 0%, 100%;
+  --cl-profile-name: 0, 0%, 97%;
+  --cl-profile-bio: 0, 0%, 72%;
+  --cl-like-btn-hovered: 162, 100%, 93%;
+  --cl-reject-btn-hovered: 340, 100%, 95%;
 }
 
 /* RESET */
@@ -31,7 +31,7 @@ p {
 
 /* Set up body */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: hsl(var(--cl-profile-bio));
   font-weight: 400;
   font-size: 1.5rem;
@@ -40,19 +40,19 @@ body {
 
 /* Make images easier to work with */
 img {
-    display: block;
-    object-fit: cover;
+  display: block;
+  object-fit: cover;
 }
 
 /* ---------------- UTILITY CLASSES ------------------*/
 
 .container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 .5rem;
-    max-width: 35rem;
-    background-color: hsl(var(--cl-profile-name));
-    display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+  max-width: 35rem;
+  background-color: hsl(var(--cl-profile-name));
+  display: flex;
 }
 
 .rounded {
@@ -87,22 +87,20 @@ h2 {
   align-items: center;
   border: none;
   background-color: hsl(var(--cl-white));
-  box-shadow: 0 10px 15px hsl(var(--cl-profile-bio), .5);
+  box-shadow: 0 10px 15px hsl(var(--cl-profile-bio), 0.5);
   cursor: pointer;
 }
 
 .reject-btn:hover,
-.reject-btn:focus,
-.recect-btn:active {
+.reject-btn:focus {
   background-color: hsl(var(--cl-reject-btn-hovered));
-  box-shadow: 0 10px 15px hsl(var(--cl-reject-btn-hovered), .8);
+  box-shadow: 0 10px 15px hsl(var(--cl-reject-btn-hovered), 0.8);
 }
 
 .like-btn:hover,
-.like-btn:focus,
-.like-btn:active {
+.like-btn:focus {
   background-color: hsl(var(--cl-like-btn-hovered));
-  box-shadow: 0 10px 15px hsl(var(--cl-like-btn-hovered), .8);
+  box-shadow: 0 10px 15px hsl(var(--cl-like-btn-hovered), 0.8);
 }
 
 /* ---------------- LAYOUT -------------------- */
@@ -110,7 +108,7 @@ h2 {
 /* Header */
 
 header .container {
-  padding: 1.25rem 1.125rem; 
+  padding: 1.25rem 1.125rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -144,7 +142,7 @@ main .container {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 1rem;
-  padding-left: .75em;
+  padding-left: 0.75em;
   padding-bottom: 1em;
 
   display: flex;
