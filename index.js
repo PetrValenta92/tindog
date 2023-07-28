@@ -2,19 +2,34 @@
 import dogData from "./data.js";
 import Dog from "./Dog.js";
 
-let currentProfileIndex = 0;
+let dogsArray = [ ...Array(dogData.length).keys() ];
+
+function getNewProfile() {
+    const nextDogData = dogData[dogsArray.shift()];
+    return nextDogData ? new Dog(nextDogData) : {};
+}
 
 function likeProfile() {
     dogProfile.isLiked();
     dogProfile.isSwiped();
-
     render();
+
+    setTimeout(() => {
+        dogProfile = getNewProfile();
+        render();
+    }, 1500);
+
+    
 }
 
 function rejectProfile() {
     dogProfile.isSwiped();
-
     render();
+
+    setTimeout(() => {
+        dogProfile = getNewProfile();
+        render();
+    }, 1500);
 }
 
 function render() {
@@ -24,10 +39,7 @@ function render() {
 document.getElementById("like-btn").addEventListener("click", likeProfile); 
 document.getElementById("reject-btn").addEventListener("click", rejectProfile); 
 
-// Create an array of dog profiles
-const profiles = dogData.map(data => new Dog(data));
-let dogProfile = profiles[currentProfileIndex];
+let dogProfile = getNewProfile();
 
 render();
-
 
