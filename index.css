@@ -66,7 +66,7 @@ img {
 /* ----------------- TYPOGRAPHY ------------------- */
 
 h2,
-.end-btn {
+.reset-btn {
   font-size: 2rem;
   font-weight: 600;
   color: hsl(var(--cl-profile-name));
@@ -107,7 +107,7 @@ h2 {
   box-shadow: 0 10px 15px hsl(var(--cl-like-btn-hovered), 0.8);
 }
 
-.end-btn {
+.reset-btn {
   margin: 1.25rem 0;
   border: none;
   border-radius: 1.25rem;
@@ -120,8 +120,8 @@ h2 {
   cursor: pointer;
 }
 
-.end-btn:hover,
-.end-btn:focus {
+.reset-btn:hover,
+.reset-btn:focus {
   background: linear-gradient(
     180deg,
     rgba(0, 216, 148, 1) 0%,
@@ -197,6 +197,10 @@ main .container {
 .end {
   justify-content: end;
   align-items: center;
+}
+
+.end-gif {
+  border-radius: 1rem;
 }
 
 .end-message {
