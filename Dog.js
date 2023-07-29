@@ -48,23 +48,6 @@ class Dog {
           </div>
         `
     }
-
-    getEndingHtml() {
-        return `
-          <div class="end flex">
-            <img
-              class="end-gif"
-              src="https://i.gifer.com/1R8m.gif"
-              alt="Funny gif from Looney Tones"
-            />
-            <p class="end-message">
-              There's no one around you. Expand your discovery or go Global to
-              see more.
-            </p>
-            <button class="end-btn">Go Global</button>
-          </div>
-        `
-    }
 }
 
 export default Dog;
