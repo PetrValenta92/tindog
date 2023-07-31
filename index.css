@@ -284,6 +284,7 @@ main .container {
 
 .end-gif {
   border-radius: 1rem;
+  max-width: 100%;
 }
 
 .end-message {
