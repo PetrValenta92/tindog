@@ -38,6 +38,12 @@ body {
   line-height: 1.5;
 }
 
+@media (width < 420px) {
+  body {
+    font-size: 1.25rem;
+  }
+} 
+
 /* Make images easier to work with */
 img {
   display: block;
@@ -52,7 +58,6 @@ img {
   padding: 0 0.5rem;
   max-width: 35rem;
   background-color: hsl(var(--cl-profile-name));
-  display: flex;
 }
 
 .rounded {
@@ -71,6 +76,13 @@ h2,
   font-weight: 600;
   color: hsl(var(--cl-profile-name));
 }
+
+@media (width < 420px) {
+  h2,
+  .reset-btn {
+    font-size: 1.75rem;
+  }
+} 
 
 h2 {
   line-height: 1.125;
@@ -95,17 +107,39 @@ h2 {
   cursor: pointer;
 }
 
+@media (width < 420px) {
+  .btn {
+    width: 5rem;
+    height: 5rem;
+    box-shadow: 0 7px 12px hsl(var(--cl-profile-bio), 0.5);
+  }
+} 
+
 .reject-btn:hover,
 .reject-btn:focus {
   background-color: hsl(var(--cl-reject-btn-hovered));
   box-shadow: 0 10px 15px hsl(var(--cl-reject-btn-hovered), 0.8);
 }
 
+@media (width < 420px) {
+  .reject-btn:hover,
+  .reject-btn:focus {
+    box-shadow: 0 7px 12px hsl(var(--cl-reject-btn-hovered), 0.8);
+  }
+} 
+
 .like-btn:hover,
 .like-btn:focus {
   background-color: hsl(var(--cl-like-btn-hovered));
   box-shadow: 0 10px 15px hsl(var(--cl-like-btn-hovered), 0.8);
 }
+
+@media (width < 420px) {
+  .like-btn:hover,
+  .like-btn:focus {
+    box-shadow: 0 7px 12px hsl(var(--cl-like-btn-hovered), 0.8);
+  }
+} 
 
 .reset-btn {
   margin: 1.25rem 0;
@@ -119,6 +153,13 @@ h2 {
   );
   cursor: pointer;
 }
+
+@media (width < 420px) {
+  .reset-btn {
+    margin: 1rem 0;
+    padding: 0.625rem 4.5rem;
+  }
+} 
 
 .reset-btn:hover,
 .reset-btn:focus {
@@ -139,20 +180,47 @@ header .container {
   align-items: center;
 }
 
+@media (width < 420px) {
+  header .container {
+    padding: 1rem .875rem;
+  }
+}
+
 .profile-icon {
   width: 2rem;
   height: 2.125rem;
 }
+
+@media (width < 420px) {
+  .profile-icon {
+    width: 1.75rem;
+    height: 1.875rem;
+  }
+} 
 
 .logo {
   width: 5.25rem;
   height: 2.625rem;
 }
 
+@media (width < 420px) {
+  .logo {
+    width: 5rem;
+    height: 2.375rem;
+  }
+} 
+
 .chat-icon {
   width: 2.125rem;
   height: 2.125rem;
 }
+
+@media (width < 420px) {
+  .chat-icon {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+} 
 
 /* Profile */
 
@@ -167,13 +235,19 @@ main .container {
   flex-direction: column;
 }
 
+@media (width < 420px) {
+  .profile,
+  .end {
+    min-height: 36rem;
+  }
+} 
+
 .profile {
   position: relative;
   overflow: hidden;
-  max-width: 100%;
-  min-height: 47rem;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   border-radius: 1rem;
   padding-left: 0.75em;
   padding-bottom: 1em;
@@ -192,6 +266,15 @@ main .container {
   transform: rotate(-30deg);
 }
 
+@media (width < 420px) {
+  .label {
+    top: 2.5rem;
+    left: 0.5em;
+    max-width: 11rem;
+    max-height: 5.5rem;
+  }
+} 
+
 /* End */
 
 .end {
@@ -207,3 +290,9 @@ main .container {
   text-align: center;
   margin-top: 10rem;
 }
+
+@media (width < 420px) {
+  .end-message {
+    margin-top: 5rem;
+  }
+} 
