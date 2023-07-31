@@ -51,8 +51,8 @@ No more profiles
 
 ### Links
 
-- Solution URL: [Github Repository](https://github.com/PetrValenta92/learning-journal)
-- Live Site URL: [Github Pages](https://petrvalenta92.github.io/learning-journal/)
+- Solution URL: [Github Repository](https://github.com/PetrValenta92/tindog)
+- Live Site URL: [Github Pages](https://petrvalenta92.github.io/tindog/)
 
 ## My process
 
@@ -60,24 +60,20 @@ No more profiles
 
 - Semantic HTML5 markup
 - CSS custom properties
-- CSS pseudoclasses
 - Flexbox
-- GRID
 - Mobile first design
-- Multiple pages design
 - Accessibility focus design
 - Responsive design
-- Relative units
-- Media queries
-- Viewport meta tags
+- Javascript modules
+- Javascript classes
 
 ### What I learned
 
-...
+I learned to split my javascript code into modules. I also learned how to export and import data from a database file and further work with it using JS classes.
 
 ### Continued development
 
-In future I would like to fill the page with my own original contant. Pictures and texts are going to be authentic and personal. With that I would like to add more articles which would be accessible (there will be a link on them). Next thing would be finishing the "View more" button, which is already prepared, but I need more time to finishing all the styling and javascript code.
+I would like to expand the database with more profiles in the future. If a user exhausted all profiles, he/she could have all profiles he/she liked and rejected displayed.
 
 ## Author
 
