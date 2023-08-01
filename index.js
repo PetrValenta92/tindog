@@ -48,19 +48,18 @@ function showNextProfile() {
 
 function disableBtns() {
     likeBtn.disabled = true;
-    likeBtn.style.filter = 'grayscale(1)';
+    likeBtn.classList.add("disabled");
 
     rejectBtn.disabled = true;
-    rejectBtn.style.filter = 'grayscale(1)';
-
+    rejectBtn.classList.add("disabled");
 }
 
 function enableBtns() {
     likeBtn.disabled = false;
-    likeBtn.style.filter = 'grayscale(0)';
+    likeBtn.classList.remove("disabled");
 
     rejectBtn.disabled = false;
-    rejectBtn.style.filter = 'grayscale(0)';
+    rejectBtn.classList.remove("disabled");
 }
 
 function renderEnd() {
