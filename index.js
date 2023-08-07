@@ -12,6 +12,22 @@ function getNewProfile() {
     return nextDogData ? new Dog(nextDogData) : {};
 }
 
+function disableBtns() {
+    likeBtn.disabled = true;
+    likeBtn.classList.add("disabled");
+
+    rejectBtn.disabled = true;
+    rejectBtn.classList.add("disabled");
+}
+
+function enableBtns() {
+    likeBtn.disabled = false;
+    likeBtn.classList.remove("disabled");
+
+    rejectBtn.disabled = false;
+    rejectBtn.classList.remove("disabled");
+}
+
 function likeProfile() {
     disableBtns();
     dogProfile.isLiked();
@@ -44,22 +60,6 @@ function showNextProfile() {
             
         }, 1000);
     }    
-}
-
-function disableBtns() {
-    likeBtn.disabled = true;
-    likeBtn.classList.add("disabled");
-
-    rejectBtn.disabled = true;
-    rejectBtn.classList.add("disabled");
-}
-
-function enableBtns() {
-    likeBtn.disabled = false;
-    likeBtn.classList.remove("disabled");
-
-    rejectBtn.disabled = false;
-    rejectBtn.classList.remove("disabled");
 }
 
 function renderEnd() {
